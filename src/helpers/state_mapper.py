@@ -12,8 +12,6 @@ class StateMapper():
         state.team_blue = self.__get_team_blue(global_state)
         state.team_yellow = self.__get_team_yellow(global_state)
 
-        print(state.ball)
-
         return state
 
     @classmethod
