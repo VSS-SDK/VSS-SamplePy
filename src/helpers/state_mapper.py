@@ -1,12 +1,7 @@
-import sys
-
-sys.path.insert(1, 'protos')
-sys.path.insert(1, 'domain')
-
-from state import State
-from ball import Ball
-from robot import Robot
-from state_pb2 import Global_State
+from src.domain.state import State
+from src.domain.ball import Ball
+from src.domain.robot import Robot
+from src.protos.state_pb2 import Global_State
 
 class StateMapper():
     @classmethod

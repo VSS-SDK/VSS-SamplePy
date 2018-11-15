@@ -1,4 +1,4 @@
-from point import Point
+from .point import Point
 
 class Ball(Point):
     speed_x = 0.0

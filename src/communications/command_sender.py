@@ -1,12 +1,10 @@
 import zmq
-import sys
+
 import google.protobuf.text_format
 
-sys.path.insert(1, 'protos')
-sys.path.insert(1, 'domain')
-
-from command_pb2 import Global_Commands
-from command import Command
+from src.protos.command_pb2 import Global_Commands
+# from command_pb2 import Global_Commands
+from src.domain.command import Command
 
 class CommandSender():
     context = None
