@@ -38,7 +38,7 @@ class StateMapper():
     def __get_team_yellow(self, global_state):
         team_yellow = list()
 
-        robots = global_state.robots_blue
+        robots = global_state.robots_yellow
 
         for robot_state in robots:
             team_yellow.append(self.__get_robot(robot_state))
