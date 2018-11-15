@@ -1,7 +1,7 @@
 import time
 import sys
 
-sys.path.insert(0, 'communications/')
+sys.path.insert(1, 'communications/')
 
 from command_sender import CommandSender
 from debug_sender import DebugSender

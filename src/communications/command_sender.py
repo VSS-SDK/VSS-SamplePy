@@ -1,8 +1,8 @@
 import sys
 
-sys.path.insert(0, '../protos/')
+sys.path.insert(1, 'protos')
 
-import command_pb2
+from command_pb2 import Global_Commands
 
 class CommandSender():
     def create_socket(self):
