@@ -1,6 +1,7 @@
 import zmq
 import sys
 import google.protobuf.text_format
+import base64
 
 sys.path.insert(1, 'protos')
 sys.path.insert(1, 'debug')
@@ -19,10 +20,7 @@ class StateReceiver():
         self.socket.setsockopt(zmq.SUBSCRIBE, b"")
 
     def receive_state(self):
-        print("receiving")
-        self.socket.recv()
-        print("received")
-        #global_state = Global_State()
-        #global_state.ParseFromString(msg)
-        #print(f"topic={topic} content={str(global_state)}")
+        byte_array = self.socket.recv()
+        global_state = Global_State()
+        global_state.ParseFromString(byte_array)
         return 0
