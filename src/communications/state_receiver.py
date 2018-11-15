@@ -5,9 +5,11 @@ import base64
 
 sys.path.insert(1, 'protos')
 sys.path.insert(1, 'debug')
+sys.path.insert(1, 'helpers')
 
 from state_pb2 import Global_State
 from state import State
+from state_mapper import StateMapper
 
 class StateReceiver():
     context = None
@@ -23,4 +25,7 @@ class StateReceiver():
         byte_array = self.socket.recv()
         global_state = Global_State()
         global_state.ParseFromString(byte_array)
-        return 0
+
+        state = StateMapper.global_state_to_state(global_state)
+
+        return state
