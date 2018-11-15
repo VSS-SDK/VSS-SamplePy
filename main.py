@@ -1,8 +1,11 @@
 from src.communications.command_sender import CommandSender
-#from src.communications.debug_sender import DebugSender
+from src.communications.debug_sender import DebugSender
 from src.communications.state_receiver import StateReceiver
 from src.domain.command import Command
 from src.domain.wheels_command import WheelsCommand
+from src.domain.point import Point
+from src.domain.pose import Pose
+from src.domain.debug import Debug
 
 def main():
 	state_receiver = StateReceiver()
@@ -11,13 +14,13 @@ def main():
 	command_sender = CommandSender()
 	command_sender.create_socket()
 
-	#debug_sender = DebugSender()
-	#debug_sender.create_socket()
+	debug_sender = DebugSender()
+	debug_sender.create_socket()
 
 	while True:
 		state = state_receiver.receive_state()
 		command_sender.send_command(build_command())
-		#debug_sender.send_debug(build_debug())
+		debug_sender.send_debug(build_debug(state))
 
 
 def build_command():
@@ -30,8 +33,15 @@ def build_command():
 	return command
 
 
-def build_debug():
-	return Debug()
+def build_debug(state):
+	debug = Debug()
+	debug.clean()
+
+	for robot in state.team_yellow:
+		debug.step_points.append(Point(robot.x + 10, robot.y + 10))
+		debug.final_poses.append(Pose(state.ball.x + 10, state.ball.y + 10, 10))
+
+	return debug
 
 
 if __name__ == "__main__":
