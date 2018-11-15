@@ -12,7 +12,9 @@ def main():
 	state_receiver.create_socket()
 
 	while True:
-		time.sleep(5)
+		state = state_receiver.receive_state()
+		# build and send command
+		# build and send debug
 
 
 if __name__ == "__main__":

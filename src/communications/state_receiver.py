@@ -16,6 +16,13 @@ class StateReceiver():
         self.context = zmq.Context()
         self.socket = self.context.socket(zmq.SUB)
         self.socket.connect("tcp://localhost:5555")
+        self.socket.setsockopt(zmq.SUBSCRIBE, b"")
 
     def receive_state(self):
-        return State() 
+        print("receiving")
+        self.socket.recv()
+        print("received")
+        #global_state = Global_State()
+        #global_state.ParseFromString(msg)
+        #print(f"topic={topic} content={str(global_state)}")
+        return 0
