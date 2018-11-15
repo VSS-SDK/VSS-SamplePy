@@ -1,15 +1,11 @@
 import zmq
-import sys
+
 import google.protobuf.text_format
 import base64
 
-sys.path.insert(1, 'protos')
-sys.path.insert(1, 'debug')
-sys.path.insert(1, 'helpers')
-
-from state_pb2 import Global_State
-from state import State
-from state_mapper import StateMapper
+from src.protos.state_pb2 import Global_State
+from src.domain.state import State
+from src.helpers.state_mapper import StateMapper
 
 class StateReceiver():
     context = None

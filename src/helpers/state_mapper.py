@@ -1,13 +1,7 @@
-import sys
-
-sys.path.insert(1, 'protos')
-sys.path.insert(1, 'domain')
-
-from state import State
-from ball import Ball
-from robot import Robot
-from pose import Pose
-from state_pb2 import Global_State
+from src.domain.state import State
+from src.domain.ball import Ball
+from src.domain.robot import Robot
+from src.protos.state_pb2 import Global_State
 
 class StateMapper():
     @classmethod
@@ -58,6 +52,4 @@ class StateMapper():
         robot_pose = robot_state.pose
         robot_v_pose = robot_state.v_pose
 
-        print(robot_pose)
-        print(robot_v_pose)
         return Robot(robot_pose.x, robot_pose.y, robot_pose.yaw, robot_v_pose.x, robot_v_pose.y, robot_v_pose.yaw)

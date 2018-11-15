@@ -1,4 +1,4 @@
-from pose import Pose
+from .pose import Pose
 
 class Robot(Pose):
     speed_x = 0.0

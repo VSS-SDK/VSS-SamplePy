@@ -1,4 +1,4 @@
-from ball import Ball
+from .ball import Ball
 
 class State():
     ball = None

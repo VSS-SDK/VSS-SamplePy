@@ -1,12 +1,9 @@
 import zmq
-import sys
+
 import google.protobuf.text_format
 
-sys.path.insert(1, 'protos')
-sys.path.insert(1, 'domain')
-
-from debug_pb2 import Global_Debug
-from debug import Debug
+from src.protos.debug_pb2 import Global_Debug
+from src.domain.debug import Debug
 
 class DebugSender():
     context = None
