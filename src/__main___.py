@@ -8,9 +8,11 @@ from debug_sender import DebugSender
 from state_receiver import StateReceiver
 
 def main():
-    while True:
-        time.sleep(5)
-        print("teste")
+	state_receiver = StateReceiver()
+	state_receiver.create_socket()
+
+	while True:
+		time.sleep(5)
 
 
 if __name__ == "__main__":
