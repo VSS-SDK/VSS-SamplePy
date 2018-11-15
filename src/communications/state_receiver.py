@@ -1,7 +1,5 @@
 import zmq
-
 import google.protobuf.text_format
-import base64
 
 from src.protos.state_pb2 import Global_State
 from src.domain.state import State
