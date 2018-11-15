@@ -52,4 +52,4 @@ class StateMapper():
         robot_pose = robot_state.pose
         robot_v_pose = robot_state.v_pose
 
-        return Robot(robot_pose.x, robot_pose.y, robot_pose.angle, robot_v_pose.x, robot_v_pose.y, robot_v_pose.angle)
+        return Robot(robot_pose.x, robot_pose.y, robot_pose.yaw, robot_v_pose.x, robot_v_pose.y, robot_v_pose.yaw)
