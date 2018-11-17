@@ -1,4 +1,4 @@
-from .ball import Ball
+from domain.ball import Ball
 
 class State():
     ball = Ball()

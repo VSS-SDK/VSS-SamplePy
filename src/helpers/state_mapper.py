@@ -1,7 +1,7 @@
-from src.domain.state import State
-from src.domain.ball import Ball
-from src.domain.robot import Robot
-from src.protos.state_pb2 import Global_State
+from domain.state import State
+from domain.ball import Ball
+from domain.robot import Robot
+from protos.state_pb2 import Global_State
 
 class StateMapper():
     @classmethod

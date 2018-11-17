@@ -1,7 +1,7 @@
-from src.domain.debug import Debug
-from src.domain.point import Point
-from src.protos.debug_pb2 import Global_Debug
-from src.protos.debug_pb2 import Pose
+from domain.debug import Debug
+from domain.point import Point
+from protos.debug_pb2 import Global_Debug
+from protos.debug_pb2 import Pose
 
 class DebugMapper():
     @classmethod

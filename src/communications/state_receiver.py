@@ -1,9 +1,9 @@
 import zmq
 import google.protobuf.text_format
 
-from src.protos.state_pb2 import Global_State
-from src.domain.state import State
-from src.helpers.state_mapper import StateMapper
+from protos.state_pb2 import Global_State
+from domain.state import State
+from helpers.state_mapper import StateMapper
 
 class StateReceiver():
     context = None
