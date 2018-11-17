@@ -1,11 +1,13 @@
-from communications.command_sender import CommandSender
-from communications.debug_sender import DebugSender
-from communications.state_receiver import StateReceiver
-from domain.command import Command
-from domain.wheels_command import WheelsCommand
-from domain.point import Point
-from domain.pose import Pose
-from domain.debug import Debug
+import vsscorepy
+
+from vsscorepy import CommandSender
+from vsscorepy.communications.debug_sender import DebugSender
+from vsscorepy.communications.state_receiver import StateReceiver
+from vsscorepy.domain.command import Command
+from vsscorepy.domain.wheels_command import WheelsCommand
+from vsscorepy.domain.point import Point
+from vsscorepy.domain.pose import Pose
+from vsscorepy.domain.debug import Debug
 
 def main():
 	state_receiver = StateReceiver()
