@@ -1,7 +1,7 @@
-from src.domain.command import Command
-from src.domain.wheels_command import WheelsCommand
-from src.protos.command_pb2 import Global_Commands
-from src.protos.command_pb2 import Robot_Command
+from domain.command import Command
+from domain.wheels_command import WheelsCommand
+from protos.command_pb2 import Global_Commands
+from protos.command_pb2 import Robot_Command
 
 class CommandMapper():
     @classmethod

@@ -1,9 +1,9 @@
 import zmq
 import google.protobuf.text_format
 
-from src.protos.command_pb2 import Global_Commands
-from src.domain.command import Command
-from src.helpers.command_mapper import CommandMapper
+from protos.command_pb2 import Global_Commands
+from domain.command import Command
+from helpers.command_mapper import CommandMapper
 
 class CommandSender():
     context = None

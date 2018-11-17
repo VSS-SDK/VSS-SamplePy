@@ -1,11 +1,11 @@
-from src.communications.command_sender import CommandSender
-from src.communications.debug_sender import DebugSender
-from src.communications.state_receiver import StateReceiver
-from src.domain.command import Command
-from src.domain.wheels_command import WheelsCommand
-from src.domain.point import Point
-from src.domain.pose import Pose
-from src.domain.debug import Debug
+from communications.command_sender import CommandSender
+from communications.debug_sender import DebugSender
+from communications.state_receiver import StateReceiver
+from domain.command import Command
+from domain.wheels_command import WheelsCommand
+from domain.point import Point
+from domain.pose import Pose
+from domain.debug import Debug
 
 def main():
 	state_receiver = StateReceiver()
