@@ -1,6 +1,6 @@
 import vsscorepy
 
-from vsscorepy import CommandSender
+from vsscorepy.communications.command_sender import CommandSender
 from vsscorepy.communications.debug_sender import DebugSender
 from vsscorepy.communications.state_receiver import StateReceiver
 from vsscorepy.domain.command import Command
