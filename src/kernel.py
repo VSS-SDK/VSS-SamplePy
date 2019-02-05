@@ -9,7 +9,8 @@ from vsscorepy.domain.point import Point
 from vsscorepy.domain.pose import Pose
 from vsscorepy.domain.debug import Debug
 
-class Kernel():
+
+class Kernel(object):
     state_receiver = None
     command_sender = None
     debug_sender = None
@@ -32,12 +33,11 @@ class Kernel():
     def __build_command(self):
         command = Command()
 
-        command.commands.append(WheelsCommand(10, -10))
-        command.commands.append(WheelsCommand(10, -10))
-        command.commands.append(WheelsCommand(10, -10))
+        command.wheels_commands.append(WheelsCommand(10, -10))
+        command.wheels_commands.append(WheelsCommand(10, -10))
+        command.wheels_commands.append(WheelsCommand(10, -10))
 
         return command
-
 
     def __build_debug(self, state):
         debug = Debug()
